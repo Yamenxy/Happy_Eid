@@ -16,7 +16,8 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    # Note: removed `environment` to avoid environment protection/approval blocking deployments
+    environment:
+      name: github-pages
     steps:
       - uses: actions/checkout@v4
 
